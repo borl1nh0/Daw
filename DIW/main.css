@@ -1,85 +1,75 @@
-div {
-    color: black;
+h1{ display: inline-block;
+width: 20%;
 }
-.todo {
-    border: black 2px;
-    margin: 10px;
-    padding: 10px;
-}
-body {
-    margin: 0;
+body{
     font-family: Arial, sans-serif;
-    background: #f9f9f9;
+    margin: 0;
+    padding: 0;
+    background-color: #f0b465;
+}
+div{
+    border: 2px solid black;
+}
+.menu{
+    text-align: right;
+    padding: 10px;
+    width: 60%;
+    display: inline-block;
     
 }
+.menu2 a:hover{
+    border-radius: 5px;
+    border: 2px solid #f1d338;
+}
 
-.header {
-    background: #cddc39;
-    padding: 20px;
+.imagen-principal{
     text-align: center;
-    font-size: 1.5;
-    
-    box-sizing: border-box;
-    height: 50px;
-    border: black solid 1px;
-    
-    margin-left: 20px;
-    margin-right: 20px;
 }
-
-.container {
-    display: flex;
-    min-height: 400px;
-    
-    margin: 10px;
-}
-
-.nav {
-    background: #f8bbd0;
-    border: black solid 1px;
-    width: 200px;
-    margin: 10px;
-    box-sizing: border-box;
-    font-size: 1.2em;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.presentacion{
     text-align: center;
-    padding-top: 25%;
+    font-size: 20px;
+    margin: 20px;
+}
+ .boton{
+    border-radius: 5px;
+    border:2px solid #f1d338;
+    margin-left: 60%;
+    margin-top: 50%;
+    }
+footer {
+    text-align: center;
     
+}
+ @media (prefers-color-scheme: dark){
+    body{
+    background:#000;color:#ffeb3b;
+    font-family:"comic sans ms",cursive
+    }
+    nav a, footer a{
+    color:#ffeb3b
+    }
+    .boton{
+    border-color:#ffeb3b;color:#ffeb3b
+    }
+    .boton:hover{
+    background:#ffeb3b;color:#000
+}
+  }
    
 
-    
-    
-}
-
-.main {
-    background: #fff9c4;
-    flex: 1;
-    margin: 10PX;
-    border: black solid 1px;
-    flex-direction: column;
-
-}
-
-.article {
-    background: skyblue;
-    border: black solid 1px;
-    margin: 30px;
-    padding: 50px;
-    text-align: center;
-    border-radius: 5px;
-    box-shadow: black 1px 1px 1px 1px;
-    
-}
-
-.footer {
-    background: #b3b6e7;
-    text-align: center;
-    margin: 2px;
-    border: black solid 1px;
-    height: 50px;
-    margin-left: 20px;
-    margin-right: 20px; 
-    padding-top: 20px;
+  /* para moviles */
+  @media (max-width: 600px){
+    .boton:hover{
+        background:#ffeb3b;
+        color:#000;
     }
+    nav{
+        display:block;margin:8px 0
+    }
+    nav a{
+        display:block;margin:6px 0
+    }
+    .columna{
+        display:block;width:100%
+    }
+  }
