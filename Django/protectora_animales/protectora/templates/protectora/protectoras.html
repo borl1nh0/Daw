@@ -1,0 +1,17 @@
+<!doctype html>
+<html>
+  <head><meta charset="utf-8"><title>Protectoras</title></head>
+  <body>
+    <h1>Protectoras</h1>
+    <p><a href="/">Inicio</a> | <a href="/animales/">Animales</a> | <a href="/colaboradores/">Colaboradores</a></p>
+
+    {% for p in protectoras %}
+      <div>{{ p.nombre }} - {{ p.descripcion }} - {{ p.fecha_creacion }}</div>
+      {% if not forloop.last %}<hr>{% endif %}
+    {% empty %}
+      <div>No hay protectoras.</div>
+    {% endfor %}
+  </body>
+</html>
+
+
