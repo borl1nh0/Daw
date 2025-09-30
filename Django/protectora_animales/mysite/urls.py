@@ -21,7 +21,6 @@ from protectora import views
 urlpatterns = [
     path(' admin/', admin.site.urls),
     path('', views.animales, name='home'),
-   
     path('animales/', views.animales, name='animales'),
     path('protectoras/', views.protectoras, name='protectoras'),
     path('colaboradores/', views.colaboradores, name='colaboradores'),
