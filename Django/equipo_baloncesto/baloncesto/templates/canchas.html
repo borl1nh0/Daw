@@ -1,0 +1,13 @@
+<!doctype html>
+<html>
+  <head><meta charset="utf-8"><title>Canchas</title></head>
+  <body>
+    <h1>Canchas</h1>
+    <p><a href="/">Inicio</a> | <a href="/equipos/">Equipos</a> | <a href="/ciudades/">Ciudades</a></p>
+
+    {% for c in canchas %}
+      <div>{{ c.nombre }} — {{ c.direccion }} — Capacidad: {{ c.capacidad }}</div>
+      
+    {% endfor %}
+  </body>
+</html>

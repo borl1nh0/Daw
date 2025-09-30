@@ -1,0 +1,13 @@
+<!doctype html>
+<html>
+<head><meta charset="utf-8"><title>Ciudades</title></head>
+<body>
+<h1>Ciudades</h1>
+<p><a href="/">Inicio</a> | <a href="/equipos/">Equipos</a> | <a href="/canchas/">Canchas</a></p>
+
+
+{% for c in ciudades %}
+<div>{{ c.nombre }} — {{ c.provincia }} — {{ c.pais }}</div>
+{% endfor %}
+</body>
+</html>
