@@ -17,9 +17,11 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, include
 from protectora import views
+import debug_toolbar
 
 urlpatterns = [
     path(' admin/', admin.site.urls),
+    path('__debug__/', include(debug_toolbar.urls)),
     path('', views.animales, name='home'),
     path('animales/', views.animales, name='animales'),
     path('protectoras/', views.protectoras, name='protectoras'),
