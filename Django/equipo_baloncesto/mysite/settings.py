@@ -26,7 +26,7 @@ SECRET_KEY = 'django-insecure-ko0--s*ds_vzc=q*%4i-0k=p=vl%#oblj!e%n_%!n^utht6ev@
 DEBUG = True
 
 ALLOWED_HOSTS = ['127.0.0.1', 'localhost']
-
+INTERNAL_IPS = ['127.0.0.1', 'localhost']
 
 # Application definition
 
@@ -50,7 +50,7 @@ MIDDLEWARE = [
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
     # Debug Toolbar Middleware
-    'django.middleware.security.SecurityMiddleware',
+    
     'debug_toolbar.middleware.DebugToolbarMiddleware',
     
 ]
