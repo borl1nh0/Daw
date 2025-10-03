@@ -1,0 +1,14 @@
+{% extends "baloncesto/base.html" %}
+{% block title %}Equipos{% endblock %}
+{% block content %}
+<h2>Equipos</h2>
+<ul>
+  {% for e in equipos %}
+    <li>{{ e.nombre }} — {{ e.ciudad.nombre }}</li>
+  {% empty %}
+    <li>No hay equipos</li>
+  {% endfor %}
+</ul>
+<hr>
+<a href="{% url 'baloncesto:home' %}">← Volver al inicio</a>
+{% endblock %}
