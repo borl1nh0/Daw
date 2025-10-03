@@ -26,6 +26,7 @@ SECRET_KEY = 'django-insecure-=8#^0b+w)#x(s5&2g9-e_2ugl9@=hf96)ifubk%ud8k1z_3rs*
 DEBUG = True
 
 ALLOWED_HOSTS = ['127.0.0.1', '.pythonanywhere.com','0.0.0.0'] 
+INTERNAL_IPS = ["127.0.0.1"]
 
 
 # Application definition
@@ -37,7 +38,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'animales'
+    'animales',
+    'debug_toolbar'
 ]
 
 MIDDLEWARE = [
@@ -48,6 +50,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    "debug_toolbar.middleware.DebugToolbarMiddleware",
 ]
 
 ROOT_URLCONF = 'mysite.urls'
