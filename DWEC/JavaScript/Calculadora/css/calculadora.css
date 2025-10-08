@@ -1,0 +1,64 @@
+body {
+  font-family: 'Fantasy';
+  font-size: small  ;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #f0f0f0;
+  text-align: center;
+  
+}
+
+.calculator {
+  background: white;
+  width: 270px;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 10px;
+}
+
+#display {
+  width: 90%;
+  height: 50px;
+  font-size: 1.5em;
+  text-align: right;
+  margin-bottom: 10px;
+  padding: 10px;
+}
+
+.buttons {
+  display: grid;
+  grid-template-columns: repeat(4, 60px);
+  gap: 10px;
+}
+
+button {
+  font-size: 1.2em;
+  padding: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  border: none;
+  border-radius: 5px;
+}
+
+.clear {
+  grid-column: span 4;
+  background: #ff4d4d;
+  color: white;
+}
+
+button[data-type="operator"]:hover,
+button[data-type="special"]:hover {
+  background-color: yellow;
+}
+
+button[data-type="even"]:hover {
+  background-color: red;
+  color: white;
+}
+
+button[data-type="odd"]:hover {
+  background-color: green;
+  color: white;
+}
