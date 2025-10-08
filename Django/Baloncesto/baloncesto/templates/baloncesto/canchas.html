@@ -1,0 +1,14 @@
+{% extends "baloncesto/base.html" %}
+{% block title %}Canchas{% endblock %}
+{% block content %}
+<h2>Canchas</h2>
+<ul>
+  {% for p in canchas %}
+    <li>{{ p.nombre }} — Capacidad: {{ p.capacidad }} — {{ p.ciudad.nombre }}</li>
+  {% empty %}
+    <li>No hay canchas</li>
+  {% endfor %}
+</ul>
+<hr>
+<a href="{% url 'baloncesto:home' %}">← Volver al inicio</a>
+{% endblock %}

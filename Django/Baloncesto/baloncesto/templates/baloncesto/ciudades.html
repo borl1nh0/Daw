@@ -1,0 +1,14 @@
+{% extends "baloncesto/base.html" %}
+{% block title %}Ciudades{% endblock %}
+{% block content %}
+<h2>Ciudades</h2>
+<ul>
+  {% for c in ciudades %}
+    <li>{{ c.nombre }} ({{ c.pais }})</li>
+  {% empty %}
+    <li>No hay ciudades</li>
+  {% endfor %}
+</ul>
+<hr>
+<a href="{% url 'baloncesto:home' %}">← Volver al inicio</a>
+{% endblock %}
