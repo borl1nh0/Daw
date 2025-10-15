@@ -1,0 +1,165 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
+}
+
+.contenedor {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    gap: 20px;
+    padding: 20px;
+}
+
+.panel-izquierdo {
+    background: linear-gradient(135deg, #4da6e0, #357abd);
+    color: white;
+    padding: 30px;
+    border-radius: 15px;
+    width: 800px;
+    height: 800px;
+}
+.super-izquierda {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    
+    width: 200px;
+}
+.cuadro {
+    border: 1px solid #000000;
+    width: 50%;
+    height: 50px;
+    background-color: #ccc;
+    
+}
+
+.panel-izquierdo h1 {
+    font-size: 24px;
+    margin-bottom: 30px;
+    
+}
+
+.tipos-dolor {
+    list-style: none;
+}
+
+.tipos-dolor li {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    font-size: 16px;
+}
+
+.tipos-dolor li::before {
+    margin-right: 15px;
+    font-size: 20px;
+}
+
+.contenido-principal {
+    flex: 1;
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.cabecera-producto {
+    margin-bottom: 20px;
+}
+
+.titulo-producto {
+    font-size: 18px;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.enlace-marca {
+    color: #007185;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.valoracion {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin: 10px 0;
+}
+
+.resenas {
+    color: #007185;
+    text-decoration: none;
+}
+
+.compras {
+    color: #666;
+    font-size: 14px;
+}
+
+
+
+.seccion-precio {
+    margin: 20px 0;
+}
+
+.descuento {
+    color: #cc0c39;
+    font-weight: bold;
+}
+
+.precio-actual {
+    font-size: 24px;
+    color: #cc0c39;
+    font-weight: bold;
+}
+
+.precio-original {
+    text-decoration: line-through;
+    color: #666;
+    margin-left: 10px;
+}
+
+.info-precio {
+    font-size: 12px;
+    color: #666;
+    margin-top: 5px;
+}
+
+.variantes {
+    display: flex;
+    content: center;
+    gap: 10px;
+    margin: 20px 0;
+}
+
+.variante {
+    border: 1px solid #ddd;
+    padding: 10px;
+    border-radius: 5px;
+    text-align: center;
+    cursor: pointer;
+    min-width: 80px;
+}
+
+.variante.seleccionada {
+    border-color: #007185;
+    background-color: #e7f3ff;
+}
+
+.nombre-variante {
+    font-size: 12px;
+    color: #666;
+}
+
+.precio-variante {
+    font-weight: bold;
+    color: #333;
+}
+
