@@ -3,9 +3,37 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Boletin 2</title>
     <script src="Boletin2.js" defer></script>
-    
+    <style>
+
+    /* Estaba aburrido y se veia feo sin nada */
+        body {
+            font-family: 'Courier New', Courier, monospace;
+            font-size: 10px;
+            margin: 20px;
+        }
+        h1 {
+            color: black;
+            text-decoration: underline;
+        }
+        ul {
+            box-shadow: #333;
+        }
+        li {
+            margin: 10px 0;
+            padding: 10px;
+            
+        }
+        button {
+            padding: 10px 15px;
+            font-size: 16px;
+            cursor: pointer;
+            border-radius: 50px;
+            border-color: rgba(6, 6, 248, 0.47);
+            box-shadow: 2px 2px 10px grey;
+        }
+    </style>
 </head>
 <body>
     <h1>ESTRUCTURA CONDICIONAL</h1>
@@ -61,8 +89,18 @@
         <li>
             <button onclick="minimoMonedas()">Calcular Mínimo de Monedas</button>
         </li>
+        <li>
+            <button onclick="decimalBinario()">Pasar de Decimal a Binario</button>  
+        </li>
+        <li>
+            <button onclick="mayorFecha()">Comparar Fechas</button>
+        </li>
+        <li>
+            <button onclick="calcularTiempo()">Calcular Tiempo</button>
+        </li>
+        <li>
+            <button onclick="juegoBolitas()">Jugar a las Bolitas</button>
+        </li>
     </ul>
-
-
 </body>
 </html>

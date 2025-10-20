@@ -427,3 +427,100 @@ let cantidad = parseFloat(prompt("Introduce la cantidad de dinero en euros:"));
     }
 
 }
+function decimalBinario(){
+
+  let numero = parseInt(prompt("Introduce un número entero positivo:"));
+
+    if (isNaN(numero) || numero < 0) {
+      alert("Error: introduce un número entero positivo.");
+    } else if (numero === 0) {
+      alert("El número en binario es: 0");
+    } else {
+      let binario = "";
+
+    while (numero > 0) {
+      let resto = numero % 2;
+      binario = resto + binario;
+      numero = parseInt(numero / 2);
+    }
+
+    alert("El número en binario es: " + binario);
+  }
+}
+function mayorFecha(){
+// Primera fechs
+  let d1 = parseInt(prompt("Introduce el día de la primera fecha:"));
+let m1 = parseInt(prompt("Introduce el mes de la primera fecha:"));
+let a1 = parseInt(prompt("Introduce el año de la primera fecha:"));
+
+// Segunda fecha
+let d2 = parseInt(prompt("Introduce el día de la segunda fecha:"));
+let m2 = parseInt(prompt("Introduce el mes de la segunda fecha:"));
+let a2 = parseInt(prompt("Introduce el año de la segunda fecha:"));
+
+
+  if (
+    isNaN(d1) || isNaN(m1) || isNaN(a1) ||
+    isNaN(d2) || isNaN(m2) || isNaN(a2)
+  ) {
+    alert("Error: introduce solo números válidos.");
+  } else {
+    // Comparamos primero por año, luego por mes, luego por día
+    if (a1 < a2) {
+      alert("La primera fecha es anterior.");
+    } else if (a1 > a2) {
+      alert("La segunda fecha es anterior.");
+    } else {
+      // años iguales
+      if (m1 < m2) {
+        alert("La primera fecha es anterior.");
+      } else if (m1 > m2) {
+        alert("La segunda fecha es anterior.");
+      } else {
+        // meses iguales
+        if (d1 < d2) {
+          alert("La primera fecha es anterior.");
+        } else if (d1 > d2) {
+          alert("La segunda fecha es anterior.");
+        } else {
+          alert("Las dos fechas son iguales.");
+        }
+      }
+    }
+  }
+}
+function calcularTiempo() {
+  let segundos = parseInt(prompt("Introduce una cantidad de tiempo en segundos:"));
+
+  if (isNaN(segundos) || segundos < 0) {
+    alert("Error: introduce un número válido de segundos.");
+  } else {
+    let horas = parseInt(segundos / 3600);
+    segundos = segundos % 3600;
+
+    let minutos = parseInt(segundos / 60);
+    segundos = segundos % 60;
+
+    alert("Equivale a:\n" + horas + " hora(s), " + minutos + " minuto(s) y " + segundos + " segundo(s).");
+  }
+}
+function juegoBolitas(){
+alert("Donde esta la bolita?");
+alert("La bolita esta bajo uno de los 3 vasos (1, 2 o 3).");
+
+  // El ordenador elige una posición aleatoria del 1 al 3
+  let bolita = Math.floor(Math.random() * 3) + 1;
+
+  // Nosotros elegimos
+  let eleccion = parseInt(prompt("¿En qué vaso crees que está la bolita? (1, 2 o 3):"));
+
+  if (isNaN(eleccion) || eleccion < 1 || eleccion > 3) {
+    alert("Error: debes elegir 1, 2 o 3.");
+  } else {
+    if (eleccion === bolita) {
+      alert("¡Acertaste! La bolita estaba en el vaso " + bolita + ".");
+    } else {
+      alert("Error!. La bolita estaba en el vaso " + bolita + ".");
+    }
+  }
+}
