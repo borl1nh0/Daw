@@ -1,0 +1,503 @@
+/* ===========
+   Estilos base
+   =========== */
+* { box-sizing: border-box; }
+html, body { height: 100%; }
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, Ubuntu, Arial, sans-serif;
+  background: #0c1116;               /* fondo oscuro */
+  color: #c7d2da;                     /* texto principal */
+  line-height: 1.55;
+}
+
+img { max-width: 100%; display: block; }
+a { color: inherit; text-decoration: none; }
+button { font: inherit; }
+h1, h2, h3 { color: #eef6f9; margin: 0 0 .5rem; line-height: 1.2; }
+p { margin: 0 0 1rem; color: #9fb0bc; }
+
+/* ===========
+   Contenedor
+   =========== */
+.contenedor {
+  width: 100%;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 16px;
+}
+
+/* ===========
+   Encabezado
+   =========== */
+.encabezado {
+  position: sticky;
+  top: 0;
+  z-index: 20;
+  background: #0c1116;
+  border-bottom: 1px solid #1c2a36;
+}
+.encabezado .barra {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 14px 0;
+}
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: 700;
+  color: #eef6f9;
+}
+.logo__icono {
+  width: 18px; height: 18px; border-radius: 4px;
+  background: #16c77a;
+  box-shadow: 0 0 0 2px #0c1116, 0 0 0 4px #124f36;
+}
+
+.navegacion {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.menu {
+  display: flex;
+  align-items: center;
+  gap: 22px;
+}
+.menu a {
+  padding: 8px 10px;
+  border-radius: 10px;
+  color: #b7c6d1;
+}
+.menu a:hover { background: #12202b; color: #eaf4f8; }
+
+/* ===========
+   Sección hero
+   =========== */
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 28px;
+  padding: 40px 0 24px;
+}
+.hero__texto {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  max-width: 640px;
+}
+.hero__titulo { font-size: 40px; }
+.hero__bajada { max-width: 560px; }
+
+.hero__botones {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+.boton {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 16px;
+  border-radius: 12px;
+  border: 1px solid transparent;
+  background: #12202b;
+  color: #eaf4f8;
+  cursor: pointer;
+  transition: transform .05s ease, background .2s ease, border-color .2s ease;
+}
+.boton--primario {
+  background: #16c77a;
+  color: #072116;
+  border-color: #16c77a;
+  font-weight: 700;
+}
+.boton--secundario { background: #101820; border-color: #1c2a36; color: #cde3ee; }
+.boton:hover { transform: translateY(-1px); }
+
+.hero__img {
+  flex: 1 1 420px;
+  min-height: 220px;
+  border-radius: 16px;
+  border: 2px dashed #2a3b49;
+  background: linear-gradient(180deg, #0f1620, #0d141b);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #6f8796;
+  letter-spacing: .35em;
+}
+
+/* ===========
+   Cursos destacados
+   =========== */
+.seccion { padding: 18px 0 8px; }
+.seccion__titulo { font-size: 22px; margin-bottom: 16px; }
+
+.cursos {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 18px;
+}
+.tarjeta {
+  flex: 1 1 300px;                   /* tres columnas en escritorio */
+  min-width: 280px;
+  background: #111821;
+  border: 1px solid #203040;
+  border-radius: 14px;
+  padding: 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  transition: border-color .2s ease, transform .05s ease;
+}
+.tarjeta:hover { border-color: #2e465b; transform: translateY(-1px); }
+
+.tarjeta__encabezado {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.tarjeta__icono {
+  width: 26px; height: 26px; border-radius: 6px;
+  display: inline-flex; align-items: center; justify-content: center;
+  font-size: 14px; font-weight: 800; letter-spacing: .02em;
+  color: #052817;
+  background: #16c77a;
+  box-shadow: inset 0 -2px 0 rgba(0,0,0,.12);
+}
+.tarjeta__titulo { font-size: 16px; }
+.tarjeta__texto { flex: 1; }
+
+.tarjeta__pie {
+  display: flex;
+  justify-content: flex-start;
+}
+.tarjeta__ver {
+  display: inline-flex; align-items: center; gap: 8px;
+  padding: 8px 12px;
+  border: 1px solid #243646;
+  background: #0f1821;
+  color: #d5e6ef;
+  border-radius: 10px;
+}
+.tarjeta__ver:hover { background: #122536; }
+
+/* ===========
+   Beneficios
+   =========== */
+.beneficios {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+.pastilla {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 14px;
+  border: 1px solid #223341;
+  background: #0f1821;
+  color: #d5e6ef;
+  border-radius: 12px;
+  min-height: 40px;
+  flex: 1 1 220px;
+}
+.pastilla::before {
+  content: "";
+  width: 10px; height: 10px; border-radius: 999px;
+  background: #8ca2b0;
+}
+
+/* ===========
+   Pie de página
+   =========== */
+.pie {
+  margin-top: 34px;
+  border-top: 1px solid #1c2a36;
+  padding: 22px 0 34px;
+}
+.pie__fila {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+  justify-content: space-between;
+}
+.pie__col {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.pie small { color: #8fa3b1; }
+
+/* ===========
+   Utilidades
+   =========== */
+.muted { color: #8fa3b1; }
+.separador { height: 20px; }
+
+/* ===========
+   Responsivo
+   =========== */
+@media (max-width: 1024px) {
+  .hero { gap: 22px; }
+  .hero__titulo { font-size: 34px; }
+}
+
+@media (max-width: 860px) {
+  /* hero en una columna */
+  .hero {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  .hero__img { min-height: 260px; }
+  .menu { gap: 14px; }
+}
+
+@media (max-width: 560px) {
+  .encabezado .barra { flex-wrap: wrap; }
+  .menu { width: 100%; justify-content: flex-start; gap: 10px; }
+  .hero__titulo { font-size: 26px; }
+  .tarjeta { min-width: 100%; }
+  .beneficios { flex-direction: column; }
+  .pastilla { flex: 1 1 auto; width: 100%; }
+  .pie__fila { flex-direction: column; }
+}
+----------------------------------------------------------------------------------------------------------------------------------------
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Landing Cursos — Flex</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<style>
+  /* ===== Reset mínimo */
+  *,*::before,*::after{box-sizing:border-box}
+  html,body{margin:0;padding:0}
+  img{max-width:100%;display:block}
+  a{text-decoration:none}
+
+  body{
+    font-family: system-ui, -apple-system, Segoe UI, Roboto, Inter, Arial, sans-serif;
+    color:#111827; background:#ffffff; line-height:1.5;
+  }
+
+  /* ===== Paleta simple */
+  .color-primario{color:#2563eb}
+  .bg-primario{background:#2563eb}
+  .bg-suave{background:#f3f4f6}
+  .borde{border:1px solid #e5e7eb}
+  .muted{color:#6b7280}
+
+  /* ===== Contenedor */
+  .contenedor{max-width:1100px;margin:0 auto;padding:0 16px}
+
+  /* ===== 1) Header (barra superior) */
+  header{position:sticky;top:0;background:#fff;border-bottom:1px solid #e5e7eb;z-index:10}
+  .barra{
+    height:64px; display:flex; align-items:center; justify-content:space-between; gap:16px;
+  }
+  .logo{font-weight:800;font-size:20px}
+  .menu{display:flex; gap:16px}
+  .menu a{color:#111827; padding:6px 8px}
+  .menu a:hover{color:#2563eb}
+  .hamburguesa{display:none; font-size:22px; color:#111827}
+
+  /* ===== 2) Hero (portada) */
+  .hero{padding:40px 0}
+  .hero .fila{display:flex; gap:24px; align-items:center}
+  .hero .texto{flex:1 1 420px}
+  .hero h1{font-size:clamp(28px,5vw,42px);margin:.2em 0}
+  .hero p{margin:0 0 16px; color:#4b5563}
+  .botones{display:flex; gap:12px}
+  .btn{
+    display:inline-flex; align-items:center; justify-content:center;
+    padding:10px 16px; border-radius:10px; border:1px solid #1f2937;
+    background:#111827; color:#fff; transition:transform .1s ease, box-shadow .2s ease, background .2s ease, color .2s ease;
+  }
+  .btn.claro{background:#fff;color:#111827;border-color:#d1d5db}
+  .btn:hover{transform:translateY(-1px); box-shadow:0 6px 16px rgba(0,0,0,.08); background:#2563eb; border-color:#2563eb}
+  .btn.claro:hover{color:#2563eb; border-color:#2563eb}
+
+  .hero .visual{
+    flex:1 1 420px; min-height:260px; border-radius:14px; overflow:hidden;
+    display:flex; align-items:center; justify-content:center;
+    background:linear-gradient(135deg,#dbeafe,#eff6ff);
+    border:1px solid #e5e7eb;
+  }
+
+  /* ===== 3) Sección de cursos (cards) */
+  .cursos{padding:10px 0 32px}
+  .cursos .grid{
+    display:flex; flex-wrap:wrap; gap:16px;
+  }
+  .card{
+    flex:1 1 calc(33.333% - 11px); /* 3 por fila en grande */
+    min-width:260px; border:1px solid #e5e7eb; border-radius:14px;
+    padding:16px; display:flex; flex-direction:column; gap:10px; background:#fff;
+  }
+  .card i{font-size:26px;color:#2563eb}
+  .card h3{margin:0}
+  .card p{margin:0 0 6px;color:#6b7280}
+  .card .btn{align-self:flex-start}
+
+  /* ===== 4) Beneficios (icon list) */
+  .beneficios{padding:24px 0; background:#f9fafb; border-top:1px solid #eef2f7; border-bottom:1px solid #eef2f7}
+  .beneficios .lista{display:flex; gap:24px; align-items:stretch}
+  .beneficio{
+    flex:1; display:flex; gap:12px; align-items:center; padding:14px; border-radius:12px; background:#fff; border:1px solid #e5e7eb;
+  }
+  .beneficio i{font-size:22px;color:#2563eb}
+
+  /* ===== 5) Footer (2 columnas) */
+  footer{padding:28px 0}
+  .pie{display:flex; gap:24px}
+  .pie .col{flex:1}
+  .social{display:flex; gap:12px}
+  .social a{
+    width:36px;height:36px;border-radius:10px; display:flex; align-items:center; justify-content:center;
+    border:1px solid #e5e7eb; color:#111827; background:#fff; transition:background .2s, color .2s, border-color .2s;
+  }
+  .social a:hover{background:#2563eb; color:#fff; border-color:#2563eb}
+
+  /* ===== 6) Media query: móvil ≤ 768px */
+  @media (max-width:768px){
+    .menu{display:none}              /* ocultar menú horizontal */
+    .hamburguesa{display:block}      /* mostrar hamburguesa */
+    .hero .fila{flex-direction:column}
+    .beneficios .lista{flex-direction:column}
+    .pie{flex-direction:column}
+    .card{flex:1 1 100%}             /* 1 tarjeta por fila en móvil */
+  }
+</style>
+</head>
+<body>
+
+<!-- ===== 1) Header -->
+<header>
+  <div class="contenedor barra">
+    <div class="logo">MiAcademia</div>
+
+    <!-- Menú horizontal (oculto en móvil) -->
+    <nav class="menu" aria-label="Principal">
+      <a href="#">Inicio</a>
+      <a href="#">Cursos</a>
+      <a href="#">Precios</a>
+      <a href="#">Contacto</a>
+    </nav>
+
+    <!-- Icono hamburguesa (visible solo en móvil) -->
+    <button class="hamburguesa" aria-label="Abrir menú">
+      <i class="fa-solid fa-bars"></i>
+    </button>
+  </div>
+</header>
+
+<main>
+
+  <!-- ===== 2) Hero -->
+  <section class="hero">
+    <div class="contenedor fila">
+      <div class="texto">
+        <span class="muted">Aprende hoy</span>
+        <h1>Formación práctica para impulsar tu carrera</h1>
+        <p>Clases cortas, proyectos reales y tutores expertos. Empieza gratis y continúa a tu ritmo.</p>
+        <div class="botones">
+          <a class="btn" href="#">Empezar ahora</a>
+          <a class="btn claro" href="#">Ver planes</a>
+        </div>
+      </div>
+      <div class="visual">
+        <!-- Pon aquí tu imagen si quieres -->
+        <img src="https://via.placeholder.com/520x320.png?text=Portada" alt="Ilustración de portada">
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== 3) Sección de cursos -->
+  <section class="cursos">
+    <div class="contenedor">
+      <h2 style="margin:0 0 12px;">Cursos destacados</h2>
+      <div class="grid">
+        <article class="card">
+          <i class="fa-solid fa-code"></i>
+          <h3>Desarrollo Web</h3>
+          <p>HTML, CSS, JS y proyectos guiados para tu portfolio.</p>
+          <a href="#" class="btn">Ver curso</a>
+        </article>
+        <article class="card">
+          <i class="fa-solid fa-database"></i>
+          <h3>Datos para todos</h3>
+          <p>SQL, análisis y visualización con ejercicios prácticos.</p>
+          <a href="#" class="btn">Ver curso</a>
+        </article>
+        <article class="card">
+          <i class="fa-solid fa-mobile-screen"></i>
+          <h3>Apps móviles</h3>
+          <p>Fundamentos y patrones para iOS/Android con ejemplos.</p>
+          <a href="#" class="btn">Ver curso</a>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== 4) Beneficios -->
+  <section class="beneficios">
+    <div class="contenedor">
+      <div class="lista">
+        <div class="beneficio">
+          <i class="fa-solid fa-clock"></i>
+          <div>
+            <strong>Aprende a tu ritmo</strong>
+            <div class="muted">Lecciones cortas y prácticas.</div>
+          </div>
+        </div>
+        <div class="beneficio">
+          <i class="fa-solid fa-user-graduate"></i>
+          <div>
+            <strong>Tutores expertos</strong>
+            <div class="muted">Acompañamiento y feedback.</div>
+          </div>
+        </div>
+        <div class="beneficio">
+          <i class="fa-solid fa-certificate"></i>
+          <div>
+            <strong>Certificado</strong>
+            <div class="muted">Acredita tus conocimientos.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<!-- ===== 5) Footer -->
+<footer>
+  <div class="contenedor pie">
+    <div class="col">
+      <strong>Contacto</strong>
+      <div class="muted">correo@miacademia.com</div>
+      <div class="muted">+34 600 000 000</div>
+      <div class="muted">Madrid, España</div>
+    </div>
+    <div class="col">
+      <strong>Síguenos</strong>
+      <div class="social" aria-label="Redes sociales">
+        <a href="#" aria-label="Twitter"><i class="fa-brands fa-x-twitter"></i></a>
+        <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+        <a href="#" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+        <a href="#" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
